@@ -8,15 +8,31 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "commit": "cz"
+    "commit": "cz",
+    "release": "semantic-release"
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "3.3.0"
+    "cz-conventional-changelog": "3.3.0",
+    "semantic-release": "^19.0.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
   }
 }
