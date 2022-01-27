@@ -11,6 +11,12 @@
     "commit": "cz"
   },
   "devDependencies": {
-    "commitizen": "^4.2.4"
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
