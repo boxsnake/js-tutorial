@@ -20,4 +20,6 @@ jobs:
       - name: Build
         run: yarn docs:build
       - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn release
