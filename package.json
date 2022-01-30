@@ -9,9 +9,8 @@
   "private": true,
   "scripts": {
     "commit": "cz",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -19,7 +18,7 @@
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
     "semantic-release": "^19.0.2",
-    "vitepress": "^0.21.6"
+    "vuepress": "^2.0.0-beta.35"
   },
   "config": {
     "commitizen": {
@@ -37,7 +36,9 @@
       [
         "@semantic-release/git",
         {
-          "assets": ["docs/.vitepress/dist"],
+          "assets": [
+            "docs/.vuepress/dist"
+          ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
       ]
