@@ -1,0 +1,46 @@
+{
+  "name": "js-tutorial",
+  "version": "0.0.0",
+  "description": "A JS tutorial for starters.",
+  "main": "index.js",
+  "repository": "git@github.com:boxsnake/js-tutorial.git",
+  "author": "Alex Fang <deeno@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "commit": "cz",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "semantic-release": "^19.0.2",
+    "vitepress": "^0.21.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["docs/.vitepress/dist"],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}
