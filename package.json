@@ -11,12 +11,20 @@
     "commit": "cz",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "lint": "eslint ./docs/.vuepress --ext .js,.ts --ignore-path ./.gitignore",
     "release": "semantic-release"
   },
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
     "semantic-release": "^19.0.2",
     "vuepress": "^2.0.0-beta.35"
   },
