@@ -4,10 +4,10 @@ import { prefixer } from '../utils/url'
 const urlPrefix : string = 'en-US'
 
 export const enUS : SidebarConfig = [
-    prefixer(urlPrefix, '/README.md'),
-    {
-        text: 'Basic',
-        collapsible: true,
-        children: []
-    }
+  prefixer(urlPrefix, '/README.md'),
+  {
+    text: 'Basic',
+    collapsible: true,
+    children: []
+  }
 ]
