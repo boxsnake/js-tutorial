@@ -4,6 +4,7 @@ import configs from './configs'
 
 export default defineUserConfig<DefaultThemeOptions>({
   base: '/js-tutorial/',
+  dest: 'docs',
   locales: {
     '/': {
       lang: 'zh-CN',
