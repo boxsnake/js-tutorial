@@ -15,7 +15,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@semantic-release/git": "^10.0.1",
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.0",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "commitizen": "^4.2.4",
@@ -42,12 +42,12 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
       [
-        "@semantic-release/git",
+        "@qiwi/semantic-release-gh-pages-plugin",
         {
-          "assets": [
-            "src/.vuepress/dist"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+          "msg": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+          "src": "src/.vuepress/dist",
+          "dst": "docs",
+          "branch": "docs"
         }
       ]
     ]
