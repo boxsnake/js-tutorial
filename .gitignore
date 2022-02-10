@@ -2,5 +2,5 @@ node_modules
 yarn.lock
 yarn-error.log
 package-lock.json
-docs/.vuepress/.cache
-docs/.vuepress/.temp
+src/.vuepress/.cache
+src/.vuepress/.temp

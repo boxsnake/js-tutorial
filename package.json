@@ -9,9 +9,9 @@
   "private": true,
   "scripts": {
     "commit": "cz",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "lint": "eslint ./docs/.vuepress --ext .js,.ts --ignore-path ./.gitignore",
+    "docs:dev": "vuepress dev src",
+    "docs:build": "vuepress build src",
+    "lint": "eslint ./src/.vuepress --ext .js,.ts --ignore-path ./.gitignore",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -45,7 +45,7 @@
         "@semantic-release/git",
         {
           "assets": [
-            "docs/.vuepress/dist"
+            "src/.vuepress/dist"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
