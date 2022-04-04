@@ -48,6 +48,7 @@
           "src": "docs",
           "dst": ".",
           "branch": "docs",
+          "pullTagsBranch": "",
           "dotfiles": true
         }
       ],
