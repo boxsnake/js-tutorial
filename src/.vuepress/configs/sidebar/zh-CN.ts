@@ -1,4 +1,4 @@
-import type { SidebarConfig } from '@vuepress'
+import type { SidebarConfig } from 'vuepress'
 import { prefixer } from '../utils/url'
 
 const urlPrefix : string = ''
