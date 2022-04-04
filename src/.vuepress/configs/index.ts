@@ -1,1 +1,1 @@
-export * as default from './sidebar/index'
+export * as sidebar from './sidebar/index'
