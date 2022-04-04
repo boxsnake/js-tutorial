@@ -15,6 +15,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.0",
     "@semantic-release/git": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
@@ -41,10 +42,13 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       [
-        "@semantic-release/git",
+        "@qiwi/semantic-release-gh-pages-plugin",
         {
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-          "assets": ["docs"]
+          "msg": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+          "src": "docs",
+          "dst": ".",
+          "branch": "docs",
+          "dotfiles": true
         }
       ],
       "@semantic-release/github"
