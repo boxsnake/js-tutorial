@@ -51,7 +51,17 @@
           "dotfiles": true
         }
       ],
-      "@semantic-release/github"
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "docs/**/*",
+              "label": "docs bundle"
+            }
+          ]
+        }
+      ]
     ]
   }
 }
