@@ -54,7 +54,7 @@
         {
           "assets": [
             {
-              "path": "docs/**/*",
+              "path": "docs.zip",
               "label": "docs bundle"
             }
           ]

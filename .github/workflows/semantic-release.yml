@@ -21,6 +21,10 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn docs:build
+      - name: Pack Docs
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r docs.zip docs
       - name: Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
