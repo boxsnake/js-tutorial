@@ -1,6 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
-import configs from './configs/index'
+import * as configs from './configs/index'
 
 export default defineUserConfig<DefaultThemeOptions>({
   base: '/js-tutorial/',
