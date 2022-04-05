@@ -7,5 +7,6 @@ ghpages.publish('docs', {
 }, err => {
   if (err) {
     console.error(err)
+    process.exit(255)
   }
 })
