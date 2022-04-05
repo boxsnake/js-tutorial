@@ -16,7 +16,7 @@
     "release:gh-pages": "node build/gh-pages.js"
   },
   "devDependencies": {
-    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.0",
+    "@semantic-release/exec": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "commitizen": "^4.2.4",
@@ -43,15 +43,9 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       [
-        "@qiwi/semantic-release-gh-pages-plugin",
+        "@semantic-release/exec",
         {
-          "msg": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-          "src": "docs",
-          "dst": ".",
-          "branch": "docs",
-          "repositoryUrl": "git@github.com:boxsnake/js-tutorial.git",
-          "pullTagsBranch": "",
-          "dotfiles": true
+          "publishCmd": "yarn release:gh-pages"
         }
       ],
       [
