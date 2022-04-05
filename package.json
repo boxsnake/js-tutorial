@@ -12,7 +12,8 @@
     "docs:dev": "vuepress dev src",
     "docs:build": "vuepress build src",
     "lint": "eslint ./ --ext .js,.ts --ignore-path ./.gitignore",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "release:gh-pages": "node build/gh-pages.js"
   },
   "devDependencies": {
     "@qiwi/semantic-release-gh-pages-plugin": "^5.2.0",
