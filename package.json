@@ -11,7 +11,7 @@
     "commit": "cz",
     "docs:dev": "vuepress dev src",
     "docs:build": "vuepress build src",
-    "lint": "eslint ./src/.vuepress --ext .js,.ts --ignore-path ./.gitignore",
+    "lint": "eslint ./ --ext .js,.ts --ignore-path ./.gitignore",
     "release": "semantic-release"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
+    "gh-pages": "^3.2.3",
     "semantic-release": "^19.0.2",
     "vuepress": "^2.0.0-beta.35"
   },
