@@ -15,7 +15,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@semantic-release/exec": "^6.0.3",
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.2.0",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "commitizen": "^4.2.4",
@@ -41,9 +41,15 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       [
-        "@semantic-release/exec",
+        "@qiwi/semantic-release-gh-pages-plugin",
         {
-          "publishCmd": "git checkout docs && git add --all docs && git commit -m \"chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}\" && git push"
+          "msg": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+          "src": "docs",
+          "dst": ".",
+          "branch": "docs",
+          "repositoryUrl": "git@github.com:boxsnake/js-tutorial.git",
+          "pullTagsBranch": "",
+          "dotfiles": true
         }
       ],
       [
