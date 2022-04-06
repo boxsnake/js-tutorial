@@ -5,6 +5,7 @@ ghpages.publish('docs', {
     name: 'Semantic Release Bot',
     email: 'semantic-release-bot@semantic-release.org'
   },
+  repo: `https://${process.env.GH_PAGES}@github.com/boxsnake/js-tutorial.git`,
   message: `update docs`,
   branch: 'docs',
   dest: '.',
