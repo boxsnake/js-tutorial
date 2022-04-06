@@ -1,6 +1,7 @@
 const ghpages = require('gh-pages')
 
 ghpages.publish('docs', {
+  message: `update docs`,
   branch: 'docs',
   dest: '.',
   dotfiles: true
