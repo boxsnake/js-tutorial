@@ -12,7 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          token: ${{ secrets.GH_PAT }}
+          persist-credentials: true
       - name: Use Node.js 14
         uses: actions/setup-node@v2
         with:
@@ -27,6 +28,6 @@ jobs:
           args: zip -qq -r docs.zip docs
       - name: Semantic Release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: yarn release
