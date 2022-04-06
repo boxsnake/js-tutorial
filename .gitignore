@@ -2,4 +2,7 @@ node_modules
 yarn.lock
 yarn-error.log
 package-lock.json
-docs/.vitepress/dist
+src/.vuepress/.cache
+src/.vuepress/.temp
+src/.vuepress/dist
+docs

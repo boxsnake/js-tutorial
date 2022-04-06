@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_PAT }}
+          persist-credentials: true
       - name: Use Node.js 14
         uses: actions/setup-node@v2
         with:
@@ -19,7 +22,12 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn docs:build
+      - name: Pack Docs
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r docs.zip docs
       - name: Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: yarn release
